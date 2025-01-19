@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="plan">
+    <header class="header-sec">
+        <div class="top">
+        <img src="images/logo.jpg"><a href ="home.html"></a>
+        <div class="hamburger-menu">
+            &#9776;
+        </div>
+    </div>
+        <nav class="navigation">
+            <ul>
+                <li>
+                    <a href="../home-page/index.html">
+                        <span> Home</span>
+                    </a>   
+                </li>
+                <li>
+                    <a href="../event-page/event.html">
+                        <span> Event</span>
+                    </a>   
+                </li>
+                <li>
+                    <a href="../Destinations.html">
+                        <span>Destination</span>
+                    </a>   
+                </li>
+                <li>
+                    <a href="./planner.html">
+                        <span> Planner</span>
+                    </a>   
+                </li>
+                <li>
+                    <a href="../blog-page/blog.html">
+                        <span> Blog</span>
+                    </a>   
+                </li>
+
+            </ul>
+        </nav>   
+    </header>
+    <div class="container2E">
+        <div class="DateE">
+            <button class="btn2E"><img src="images/icon2.jpg" alt="calander icon"></button>
+            <h4>Date</h4>
+            <div class="inputdateE">
+                <input type="date" name="begin" placeholder="dd-mm-yyyy" value="">
+            </div>
+        </div>
+        <div class="durationE">
+            <button class="btn6E"><img src="images/timeE.png" alt="duration icon"></button>
+            <h4>Duration</h4>
+            <div class="inputtimeE">
+                <div>
+                    <label for="start-time">Start Time:</label>
+                    <input type="time" id="start-time" name="start-time" required>
+                </div>
+                <div>
+                    <label for="end-time">End Time:</label>
+                    <input type="time" id="end-time" name="end-time" required>
+                </div>
+            </div>
+        </div>
+        <div class="desinationE">
+            <button class="btn3E"><img src="images/icon3.jpg" alt="destinaton icon"></button>
+            <h4>Destination</h4>
+            <div class="inputdestination">
+                <label for="place-dropdown">Select Place:</label>
+                <select id="place-dropdown">
+                    <option value="" disabled selected>Select a place</option>
+                    <option value="Entoto park">Entoto park</option>
+                    <option value="Lalibela">Lalibela</option>
+                    <option value="Fasiledes">Fasiledes</option>
+                    <option value="Harar genb">Jegol genb</option>
+                    <option value="Axum">Axum</option>
+                    <option value="Lake Tana">Lake Tana</option>
+                </select>
+            </div>
+        </div>
+
+            <button class="btn5E"id="saveButton">Save</button>
+    </div>
+    <script src="script.js"></script>   
+</body>
+</html>

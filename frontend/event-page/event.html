@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Add Typed.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/icon promotion.ico" alt="Logo">
+        <div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul>
+                <li><a href="../home-page/index.html">home</a></li>
+                <li><a href="./event.html">event</a></li>
+                <li><a href="../Destinations.html">destination</a></li>
+                <li><a href="../planner-page/planner.html">planner</a></li>
+                <li><a href="../blog-page/blog.html">blog</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="header-container">
+        <div class="header">
+            <div class="image-slider">
+                <img src="images/Ethiopian Epiphany Celebration - at Gondar, Ethiopia.jpg" alt="Event Image"
+                    class="slider-image active">
+                <img src="images/50 stunning Olympic moments_ Abebe Bikila's 1960 marathon victory – in pictures.jpg"
+                    alt="Event Image" class="slider-image">
+                <img src="images/Genna (Ethiopia).jpg" alt="Event Image" class="slider-image">
+            </div>
+            <p><span class="typed" data-typed-items="ETHIOPIAN CURRENT Event, HISTORICAL event, CULTURAL event"></span>
+            </p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Historical Event</h2>
+        <div class="event-section">
+            <img src="images/marc-szeglat-Rj21YHC1CIY-unsplash.jpg" alt="Historical Event">
+            <div class="event-description">
+                <p>
+                    Ethiopian Christmas (Gena): Celebrated on January 7, Gena is a major religious and cultural event in
+                    Ethiopia. In Lalibela, known for its rock-hewn churches, the celebration is particularly vibrant,
+                    attracting pilgrims and tourists alike.
+                </p>
+            </div>
+        </div>
+
+        <h2>Cultural Event</h2>
+        <div class="event-section">
+            <img src="images/Genna (Ethiopia).jpg" alt="Cultural Event">
+            <div class="event-description">
+                <p>
+                    Volcanic Activity and Evacuations in Afar Region: On January 3, 2025, signs of volcanic activity
+                    were observed near Mount Dofen in the Afar region, prompting the evacuation of approximately 80,000
+                    residents as a precautionary measure. The government is closely monitoring the situation to mitigate
+                    potential risks.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for toggleMenu and swiper functionality
+        const typedElement = document.querySelector(".typed");
+        if (typedElement) {
+            const typed = new Typed(".typed", {
+                strings: typedElement.getAttribute("data-typed-items").split(", "),
+                typeSpeed: 50,
+                backSpeed: 25,
+                backDelay: 2000,
+                loop: true,
+            });
+        }
+
+        function toggleMenu() {
+            const menu = document.querySelector('header ul');
+            menu.classList.toggle('active');
+        }
+
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slider-image');
+
+        function showNextImage() {
+            // Remove the 'active' class from the current image
+            images[currentIndex].classList.remove('active');
+
+            // Update the index to the next image
+            currentIndex = (currentIndex + 1) % images.length;
+
+            // Add the 'active' class to the new image
+            images[currentIndex].classList.add('active');
+        }
+
+        // Call showNextImage every 3 seconds (3000 milliseconds)
+        setInterval(showNextImage, 3000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+# Node.js dependencies
+/node_modules/
+
+# Environment variables
+/.env
+
+# Downloaded files
+/downloads/
+
+# Logs
+*.log
+# Windows thumbnail cache
+Thumbs.db
+
